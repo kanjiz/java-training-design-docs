@@ -16,14 +16,18 @@ java-training-design-docs/
 │   │   └── implementation/            # 実装ガイドライン
 │   │       └── java/                  # Java実装ガイドライン
 │   │           ├── README.md          # 実装ガイドライン一覧
-│   │           └── console-io-guide.md # コンソール入出力ガイド
+│   │           ├── console-io-guide.md # コンソール入出力ガイド
+│   │           ├── enhanced-for-loop-guide.md  # 拡張for文ガイド
+│   │           └── string-formatted-guide.md   # 文字列フォーマットガイド
 ├── chapter02/                          # 第2章の課題
 │   ├── README.md                       # 第2章の課題一覧
 │   ├── SingleNamePrinter-README.md    
 │   ├── TwoFruitsPrinter-README.md
 │   └── RouteInputPrinter-README.md
 └── chapter03/
-    └── ...
+    ├── README.md
+    ├── BasicCalculator-README.md
+    └── SalesCalculator-README.md
 ```
 
 ## ドキュメントの種類
