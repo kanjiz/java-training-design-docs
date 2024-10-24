@@ -105,6 +105,13 @@ try (BufferedReader inputReader = new BufferedReader(
 }
 ```
 
+### 2.4 基本的な出力
+
+標準出力には主に以下のメソッドを使用します：
+
+- `System.out.println()`: 出力後に改行を追加
+- `System.out.print()`: 改行を追加しない
+
 ## 3. テスト時の確認項目
 
 1. 標準的な入力処理
