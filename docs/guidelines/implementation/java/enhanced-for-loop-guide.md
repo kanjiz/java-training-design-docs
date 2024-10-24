@@ -117,7 +117,8 @@ public class ScoreChecker {
         }
 
         // 拡張for文
-        System.out.println("\n拡張for文による出力:");
+        System.out.println();  // 空行を出力
+        System.out.println("拡張for文による出力:");
         for (int score : scores) {
             if (score >= 90) {
                 System.out.println(score);
