@@ -7,6 +7,8 @@
 1. IncrementDecrementTester
 1. InfiniteLoopForPrinter
 1. InfiniteLoopWhilePrinter
+1. MultiplicationTableForPrinter
+1. MultiplicationTableWhilePrinter
 
 それぞれの詳細設計書を参照してください。
 
