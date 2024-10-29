@@ -25,9 +25,7 @@ java-training-design-docs/
 │   ├── TwoFruitsPrinter-README.md
 │   └── RouteInputPrinter-README.md
 └── chapter03/
-    ├── README.md
-    ├── BasicCalculator-README.md
-    └── SalesCalculator-README.md
+    └── ...
 ```
 
 ## ドキュメントの種類
@@ -72,4 +70,5 @@ java-training-design-docs/
 - 図表の作成
   - クラス図：Mermaid class diagram
   - フローチャート：Mermaid flowchart
+  - シーケンス図：Mermaid sequenceDiagram
   - 表：Markdownの表形式

@@ -46,6 +46,8 @@ classDiagram
 
 ## 4. 処理フロー
 
+### 4.1 処理フローチャート
+
 ```mermaid
 flowchart TD
     A[開始] --> B["while(true)ループ開始"]
