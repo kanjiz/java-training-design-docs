@@ -1,4 +1,4 @@
-# MultiplicationTableWhilePrinter 詳細設計書
+# MultiplicationTableWhile 詳細設計書
 
 ## 1. 機能要件
 
@@ -13,7 +13,7 @@
 
 ```mermaid
 classDiagram
-    class MultiplicationTableWhilePrinter {
+    class MultiplicationTableWhile {
         +main(args: String[]): void$
     }
 ```
@@ -22,7 +22,7 @@ classDiagram
 
 | 項目 | 内容 |
 |------|------|
-| クラス名 | MultiplicationTableWhilePrinter |
+| クラス名 | MultiplicationTableWhile |
 | パッケージ/名前空間 | なし（デフォルトパッケージ） |
 | 修飾子 | public |
 

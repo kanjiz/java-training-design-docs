@@ -1,4 +1,4 @@
-# InfiniteLoopWhilePrinter 詳細設計書
+# InfiniteLoopWhile 詳細設計書
 
 ## 1. 機能要件
 
@@ -12,7 +12,7 @@
 
 ```mermaid
 classDiagram
-    class InfiniteLoopWhilePrinter {
+    class InfiniteLoopWhile {
         +main(args: String[]): void$
     }
 ```
@@ -21,7 +21,7 @@ classDiagram
 
 | 項目 | 内容 |
 |------|------|
-| クラス名 | InfiniteLoopWhilePrinter |
+| クラス名 | InfiniteLoopWhile |
 | パッケージ/名前空間 | なし（デフォルトパッケージ） |
 | 修飾子 | public |
 

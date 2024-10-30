@@ -1,9 +1,9 @@
-# WhileLoopSumCalculator 詳細設計書
+# ForLoopSum 詳細設計書
 
 ## 1. 機能要件
 
 - 連続する整数（5から9まで）の合計を計算
-- while文を使用して実装
+- for文を使用して実装
 - 計算結果を画面に表示
 
 ## 2. クラス設計
@@ -12,7 +12,7 @@
 
 ```mermaid
 classDiagram
-    class WhileLoopSumCalculator {
+    class ForLoopSum {
         +main(args: String[]): void$
     }
 ```
@@ -21,7 +21,7 @@ classDiagram
 
 | 項目 | 内容 |
 |------|------|
-| クラス名 | WhileLoopSumCalculator |
+| クラス名 | ForLoopSum |
 | パッケージ/名前空間 | なし（デフォルトパッケージ） |
 | 修飾子 | public |
 
@@ -41,8 +41,7 @@ classDiagram
 #### 3.1.2 機能説明
 
 - 合計値を保持する変数sumを0で初期化
-- ループ変数iを5で初期化
-- while文を使用して9以下の間、iの値を順次加算
+- for文を使用して5から9までの整数を順次加算
 - 計算結果を画面に表示
 
 ## 4. 処理フロー
@@ -52,13 +51,12 @@ classDiagram
 ```mermaid
 flowchart TD
     A[開始] --> B[sum = 0で初期化]
-    B --> C[i = 5で初期化]
-    C --> D{i <= 9?}
-    D -->|Yes| E[sumにiを加算]
-    E --> F[iをインクリメント]
-    F --> D
-    D -->|No| G[sumを表示]
-    G --> H[終了]
+    B --> C[for文: i = 5から9まで]
+    C --> D[sumにiを加算]
+    D --> E{i <= 9?}
+    E -->|Yes| C
+    E -->|No| F[sumを表示]
+    F --> G[終了]
 ```
 
 ## 5. 入出力設計

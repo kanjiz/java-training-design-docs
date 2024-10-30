@@ -1,4 +1,4 @@
-# MultiplicationTableForPrinter 詳細設計書
+# MultiplicationTableFor 詳細設計書
 
 ## 1. 機能要件
 
@@ -13,7 +13,7 @@
 
 ```mermaid
 classDiagram
-    class MultiplicationTableForPrinter {
+    class MultiplicationTableFor {
         +main(args: String[]): void$
     }
 ```
@@ -22,7 +22,7 @@ classDiagram
 
 | 項目 | 内容 |
 |------|------|
-| クラス名 | MultiplicationTableForPrinter |
+| クラス名 | MultiplicationTableFor |
 | パッケージ/名前空間 | なし（デフォルトパッケージ） |
 | 修飾子 | public |
 
