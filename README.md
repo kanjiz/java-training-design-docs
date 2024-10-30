@@ -1,6 +1,6 @@
-# java-training-design-docs
+# programming-design-docs
 
-Javaプログラミング演習課題の詳細設計書を管理するリポジトリです。
+プログラミング演習課題の詳細設計書を管理するリポジトリです。
 
 ## 共通参照事項
 
@@ -22,8 +22,8 @@ Javaプログラミング演習課題の詳細設計書を管理するリポジ�
 
 ### 3. 実装ガイドライン
 
-- Java実装の標準パターンとベストプラクティス
-- `docs/guidelines/implementation/java/`配下に配置
+- 言語別実装の標準パターンとベストプラクティス
+- `docs/guidelines/implementation/`配下に各言語のガイドラインを配置
 - 実装時の参照ドキュメントとして機能
 
 ## ディレクトリ・ファイル規則
@@ -55,7 +55,7 @@ Javaプログラミング演習課題の詳細設計書を管理するリポジ�
 ## ディレクトリ構造
 
 ```text
-java-training-design-docs/
+programming-design-docs/
 ├── README.md                   # このファイル
 ├── how-to-submit.md           # 課題の提出方法
 ├── docs/
@@ -63,7 +63,7 @@ java-training-design-docs/
 │   │   └── design-doc-template.md
 │   └── guidelines/           # 各種ガイドライン
 │       ├── design-doc-guidelines.md
-│       └── implementation/   # 実装ガイドライン
+│       └── implementation/   # 言語別実装ガイドライン
 ├── chapter02/               # 第2章の課題
 ├── chapter03/              # 第3章の課題
 └── ...                     # 以降のチャプター
