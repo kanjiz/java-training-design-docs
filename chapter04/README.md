@@ -1,15 +1,24 @@
-# 第4章 繰り返し型のプログラム
+# 第4章 繰返し型のプログラム
 
 ## 課題一覧
 
-1. ForLoopSumCalculator
-1. WhileLoopSumCalculator
-1. IncrementDecrementTester
-1. InfiniteLoopForPrinter
-1. InfiniteLoopWhilePrinter
-1. MultiplicationTableForPrinter
-1. MultiplicationTableWhilePrinter
+1. ForLoopSum
+   - for文を使用して5から9までの整数の合計を計算
 
-それぞれの詳細設計書を参照してください。
+2. WhileLoopSum
+   - while文を使用して5から9までの整数の合計を計算
 
-※提出方法は how-to-submit.md を参照してください。
+3. IncrementDecrement
+   - インクリメント・デクリメント演算子の動作確認
+
+4. InfiniteLoopFor
+   - for文による無限ループの実装
+
+5. InfiniteLoopWhile
+   - while文による無限ループの実装
+
+6. MultiplicationTableFor
+   - for文を使用した九九表の表示
+
+7. MultiplicationTableWhile
+   - while文を使用した九九表の表示
