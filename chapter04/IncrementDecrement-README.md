@@ -1,4 +1,4 @@
-# IncrementDecrementTester 詳細設計書
+# IncrementDecrement 詳細設計書
 
 ## 1. 機能要件
 
@@ -12,7 +12,7 @@
 
 ```mermaid
 classDiagram
-    class IncrementDecrementTester {
+    class IncrementDecrement {
         +main(args: String[]): void$
     }
 ```
@@ -21,7 +21,7 @@ classDiagram
 
 | 項目 | 内容 |
 |------|------|
-| クラス名 | IncrementDecrementTester |
+| クラス名 | IncrementDecrement |
 | パッケージ/名前空間 | なし（デフォルトパッケージ） |
 | 修飾子 | public |
 

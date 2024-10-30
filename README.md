@@ -2,31 +2,10 @@
 
 Javaプログラミング演習課題の詳細設計書を管理するリポジトリです。
 
-## リポジトリ構造
+## 共通参照事項
 
-```text
-java-training-design-docs/
-├── README.md                           # このファイル
-├── how-to-submit.md                    # 課題の提出方法
-├── docs/
-│   ├── templates/                      # 設計書のテンプレート
-│   │   └── design-doc-template.md
-│   ├── guidelines/                     # ガイドライン
-│   │   ├── design-doc-guidelines.md    # 設計書作成のガイドライン
-│   │   └── implementation/            # 実装ガイドライン
-│   │       └── java/                  # Java実装ガイドライン
-│   │           ├── README.md          # 実装ガイドライン一覧
-│   │           ├── console-io-guide.md # コンソール入出力ガイド
-│   │           ├── enhanced-for-loop-guide.md  # 拡張for文ガイド
-│   │           └── string-formatted-guide.md   # 文字列フォーマットガイド
-├── chapter02/                          # 第2章の課題
-│   ├── README.md                       # 第2章の課題一覧
-│   ├── SingleNamePrinter-README.md    
-│   ├── TwoFruitsPrinter-README.md
-│   └── RouteInputPrinter-README.md
-└── chapter03/
-    └── ...
-```
+1. 各課題の実装前に、それぞれの詳細設計書を参照してください
+2. 提出方法は how-to-submit.md を参照してください
 
 ## ドキュメントの種類
 
@@ -72,3 +51,20 @@ java-training-design-docs/
   - フローチャート：Mermaid flowchart
   - シーケンス図：Mermaid sequenceDiagram
   - 表：Markdownの表形式
+
+## ディレクトリ構造
+
+```text
+java-training-design-docs/
+├── README.md                   # このファイル
+├── how-to-submit.md           # 課題の提出方法
+├── docs/
+│   ├── templates/             # 設計書のテンプレート
+│   │   └── design-doc-template.md
+│   └── guidelines/           # 各種ガイドライン
+│       ├── design-doc-guidelines.md
+│       └── implementation/   # 実装ガイドライン
+├── chapter02/               # 第2章の課題
+├── chapter03/              # 第3章の課題
+└── ...                     # 以降のチャプター
+```

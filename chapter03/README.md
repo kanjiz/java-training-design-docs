@@ -3,8 +3,7 @@
 ## 課題一覧
 
 1. BasicCalculator
-1. SalesCalculator
+   - 基本的な四則演算の実行
 
-それぞれの詳細設計書を参照してください。
-
-※提出方法は how-to-submit.md を参照してください。
+2. SalesCalculator
+   - 単価と数量から売上金額を計算
