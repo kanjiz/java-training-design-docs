@@ -74,6 +74,29 @@ flowchart TD
     I --> B
 ```
 
+### 4.2 システム動作シーケンス
+
+```mermaid
+sequenceDiagram
+    participant User as ユーザー
+    participant System as システム
+    
+    loop 無限ループ
+        System->>User: 使用量入力要求
+        User->>System: 使用量入力
+        alt 使用量 = -1
+            System->>System: 終了
+        else 使用量 ≠ -1
+            alt 使用量 ≤ 50
+                System->>System: 基本料金+80円/㎥で計算
+            else 使用量 > 50
+                System->>System: 基本料金+従量料金で計算
+            end
+            System->>User: 料金を表示
+        end
+    end
+```
+
 ## 5. 入出力設計
 
 ### 5.1 入力仕様
