@@ -2,7 +2,7 @@
 
 このガイドラインでは、Javaにおける文字列の基本的な検証パターンと、実装上の推奨事項について説明します。
 
-## 1. null判定
+## 1. null検証
 
 ### 1.1 NullPointerExceptionとは
 
@@ -21,16 +21,16 @@ public class NullExceptionExample {
 }
 ```
 
-### 1.2 Objectsクラスのnull判定
+### 1.2 Objectsクラスのnull検証
 
-null判定に使用する主なメソッド：
+null検証に使用する主なメソッド：
 
 - [`Objects.isNull(Object obj)`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#isNull-java.lang.Object-)
-  - オブジェクトがnullかどうかを判定
+  - オブジェクトがnullかどうかを検証
   - Java 8以降で使用可能
 
 - [`Objects.nonNull(Object obj)`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#nonNull-java.lang.Object-)
-  - オブジェクトがnullでないことを判定
+  - オブジェクトがnullでないことを検証
   - Java 8以降で使用可能
 
 ```java
@@ -41,14 +41,14 @@ public class BasicNullCheck {
         String nullStr = null;
         String validStr = "Hello";
 
-        // 基本的なnull判定
-        System.out.println("nullの判定: " + Objects.isNull(nullStr));     // true
-        System.out.println("非nullの判定: " + Objects.nonNull(validStr)); // true
+        // 基本的なnull検証
+        System.out.println("nullの検証: " + Objects.isNull(nullStr));     // true
+        System.out.println("非nullの検証: " + Objects.nonNull(validStr)); // true
     }
 }
 ```
 
-## 2. 空文字列の判定
+## 2. 空文字列の検証
 
 ### 2.1 空文字列とは
 
@@ -60,7 +60,7 @@ public class EmptyStringExample {
         String emptyString = "";
         String nonEmptyString = "Hello";
         
-        // isEmpty()による判定
+        // isEmpty()による検証
         System.out.println("空文字列の検証: " + emptyString.isEmpty());      // true
         System.out.println("非空文字列の検証: " + nonEmptyString.isEmpty()); // false
         
@@ -73,14 +73,14 @@ public class EmptyStringExample {
 
 ### 2.2 nullと空文字列の組み合わせ
 
-多くの場合、nullと空文字列の両方を考慮する必要があります。
+多くの場合、nullと空文字列の両方を検証する必要があります。
 
 ```java
 import java.util.Objects;
 
 public class StringValidator {
     /**
-     * 文字列がnullまたは空文字列かどうかを判定します。
+     * 文字列がnullまたは空文字列かどうかを検証します。
      *
      * @param str 検査対象の文字列
      * @return 文字列がnullまたは空文字列の場合はtrue、それ以外はfalse
@@ -110,7 +110,7 @@ public class StringValidator {
 - Windows: Ctrl+Z + Enter
 - Unix系: Ctrl+D
 
-通常の入力操作ではnullは返されないため、一般的な入力処理では過剰なnull検証は不要です。EOFの検出が必要な特別な場合にのみnull判定を行います。
+通常の入力操作ではnullは返されないため、一般的な入力処理では過剰なnull検証は不要です。EOFの検出が必要な特別な場合にのみnull検証を行います。
 
 ```java
 import java.io.BufferedReader;
