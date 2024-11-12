@@ -25,11 +25,11 @@ public class NullExceptionExample {
 
 null検証に使用する主なメソッド：
 
-- [`Objects.isNull(Object obj)`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#isNull-java.lang.Object-)
+- [`Objects.isNull(Object obj)`](https://docs.oracle.com/javase/jp/21/docs/api/java.base/java/util/Objects.html#isNull(java.lang.Object))
   - オブジェクトがnullかどうかを検証
   - Java 8以降で使用可能
 
-- [`Objects.nonNull(Object obj)`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#nonNull-java.lang.Object-)
+- [`Objects.nonNull(Object obj)`](https://docs.oracle.com/javase/jp/21/docs/api/java.base/java/util/Objects.html#nonNull(java.lang.Object))
   - オブジェクトがnullでないことを検証
   - Java 8以降で使用可能
 
@@ -105,7 +105,7 @@ public class StringValidator {
 
 ### 3.1 標準入力での検証
 
-標準入力（BufferedReader.readLine()）からの読み込みでは、nullが返されるのはEOF（End of File）に到達した場合のみです：
+標準入力（BufferedReader.readLine()）からの読み込みでは、nullが返されるのはEOF（End of File）に到達した場合のみです。
 
 - Windows: Ctrl+Z + Enter
 - Unix系: Ctrl+D
@@ -143,7 +143,7 @@ public class InputValidator {
 
 ### 3.2 引数の検証
 
-メソッドの引数やコンストラクタでのフィールド初期化など、オブジェクトの状態を保証する必要がある場合、[`Objects.requireNonNull(T obj, String message)`](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#requireNonNull-T-java.lang.String-) が便利です：
+メソッドの引数やコンストラクタでのフィールド初期化など、オブジェクトの状態を保証する必要がある場合、[`Objects.requireNonNull(T obj, String message)`](https://docs.oracle.com/javase/jp/21/docs/api/java.base/java/util/Objects.html#requireNonNull(T,java.lang.String)) が便利です。
 
 - 引数がnullの場合にNullPointerExceptionをスロー
 - カスタムメッセージの指定が可能
