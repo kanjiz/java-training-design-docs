@@ -20,3 +20,6 @@ $RECYCLE.BIN/
 # VSCode settings
 .vscode/*
 !.vscode/*.example
+
+# Java class files
+*.class
