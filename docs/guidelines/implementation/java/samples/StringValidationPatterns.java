@@ -35,25 +35,6 @@ public class StringValidationPatterns {
   }
 
   /**
-   * 基本的なfor文を使用して内容のある文字列の配列を生成します。
-   *
-   * @param strings 元の文字列配列
-   * @return 内容のある文字列のみを含む配列
-   * @throws NullPointerException stringsがnullの場合
-   */
-  public static String[] createArrayWithContentBasic(String[] strings) {
-    Objects.requireNonNull(strings, "配列がnullです");
-    String[] result = new String[countStringsWithContent(strings)];
-    int pos = 0;
-    for (int i = 0; i < strings.length; i++) {
-      if (hasContent(strings[i])) {
-        result[pos++] = strings[i];
-      }
-    }
-    return result;
-  }
-
-  /**
    * 拡張for文を使用して内容のある文字列の配列を生成します。
    *
    * @param strings 元の文字列配列
@@ -84,24 +65,6 @@ public class StringValidationPatterns {
     return Arrays.stream(strings)
         .filter(StringValidationPatterns::hasContent)
         .toArray(String[]::new);
-  }
-
-  /**
-   * 基本的なfor文を使用して内容のある文字列のリストを生成します。
-   *
-   * @param strings 元の文字列配列
-   * @return 内容のある文字列のみを含むリスト
-   * @throws NullPointerException stringsがnullの場合
-   */
-  public static List<String> createListWithContentBasic(String[] strings) {
-    Objects.requireNonNull(strings, "配列がnullです");
-    List<String> result = new ArrayList<>();
-    for (int i = 0; i < strings.length; i++) {
-      if (hasContent(strings[i])) {
-        result.add(strings[i]);
-      }
-    }
-    return result;
   }
 
   /**
@@ -155,9 +118,6 @@ public class StringValidationPatterns {
 
     // 配列での結果を表示
     System.out.println("--- 配列での結果 ---");
-    String[] resultBasic = createArrayWithContentBasic(greetings);
-    System.out.println("基本的なfor文: " + Arrays.toString(resultBasic));
-
     String[] resultForEach = createArrayWithContentForEach(greetings);
     System.out.println("拡張for文: " + Arrays.toString(resultForEach));
 
@@ -166,9 +126,6 @@ public class StringValidationPatterns {
 
     // リストでの結果を表示
     System.out.println("\n--- リストでの結果 ---");
-    List<String> listResultBasic = createListWithContentBasic(greetings);
-    System.out.println("基本的なfor文: " + listResultBasic);
-
     List<String> listResultForEach = createListWithContentForEach(greetings);
     System.out.println("拡張for文: " + listResultForEach);
 
