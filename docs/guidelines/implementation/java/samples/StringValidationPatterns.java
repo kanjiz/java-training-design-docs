@@ -71,7 +71,7 @@ public class StringValidationPatterns {
    * 拡張for文を使用して内容のある文字列のリストを生成します。
    *
    * @param strings 元の文字列配列
-   * @return 内容のある文字列のみを含むリスト
+   * @return 内容のある文字列のみを含む、変更可能なArrayList
    * @throws NullPointerException stringsがnullの場合
    */
   public static List<String> createListWithContentForEach(String[] strings) {
@@ -89,7 +89,7 @@ public class StringValidationPatterns {
    * Stream APIを使用して内容のある文字列のリストを生成します。
    *
    * @param strings 元の文字列配列
-   * @return 内容のある文字列のみを含むリスト
+   * @return 内容のある文字列のみを含む、変更不可なリスト
    * @throws NullPointerException stringsがnullの場合
    */
   public static List<String> createListWithContentStream(String[] strings) {
