@@ -191,13 +191,6 @@ public class AdvancedValidation {
 
 Stream APIを使用すると、複数の文字列に対する検証をより簡潔に記述できます。
 
-よく使用されるメソッド：
-
-- [`String.isBlank()`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#isBlank())
-  - 文字列が空もしくは空白文字のみで構成されているかを検証
-  - Java 11以降で使用可能
-  - 空白文字には半角・全角スペース、タブ、改行などが含まれる
-
 ### 4.1 利点
 
 - 複数の検証条件を連鎖させることができる
@@ -210,9 +203,27 @@ Stream APIを使用すると、複数の文字列に対する検証をより簡�
   - filterでは例外をスローできない
   - エラーメッセージを細かく制御できない
 - 処理の途中経過を確認しにくい
-- パフォーマンスを重視する場合は従来の制御文のほうが適している場合がある
+- Stream APIの使用は、処理速度、使用メモリ量などのパフォーマンスの観点では従来の制御文に劣ることがある
 
 ### 4.3 使用例
+
+サンプルコードで使用されているメソッド：
+
+- [`String.isBlank()`](https://docs.oracle.com/javase/jp/21/docs/api/java.base/java/lang/String.html#isBlank())
+  - 文字列が空もしくは空白文字のみで構成されているかを検証
+  - Java 11以降で使用可能
+  - 空白文字には半角・全角スペース、タブ、改行などが含まれる
+
+- [`Stream.toArray()`](https://docs.oracle.com/javase/jp/21/docs/api/java.base/java/util/stream/Stream.html#toArray(java.util.function.IntFunction))
+  - Streamの要素を新しい配列に収集
+  - Java 8以降で使用可能（Stream API導入時から）
+  - 配列のジェネリック型を指定可能
+  - 要素数に応じた適切なサイズの配列を生成
+
+- [`Stream.toList()`](https://docs.oracle.com/javase/jp/21/docs/api/java.base/java/util/stream/Stream.html#toList())
+  - Streamの要素を新しいListに収集
+  - Java 16以降で使用可能
+  - 変更不可（要素の追加・削除・置換ができない）なListを返却
 
 無効なデータを単純に除外して有効なデータのみを収集する場合、Stream APIは効果的です。
 一方、無効なデータに対してエラーメッセージを出力したり、例外を投げたりする必要がある場合は、
@@ -292,7 +303,7 @@ public class StringValidationPatterns {
    * 拡張for文を使用して内容のある文字列のリストを生成します。
    *
    * @param strings 元の文字列配列
-   * @return 内容のある文字列のみを含むリスト
+   * @return 内容のある文字列のみを含む、変更可能なArrayList
    * @throws NullPointerException stringsがnullの場合
    */
   public static List<String> createListWithContentForEach(String[] strings) {
@@ -310,7 +321,7 @@ public class StringValidationPatterns {
    * Stream APIを使用して内容のある文字列のリストを生成します。
    *
    * @param strings 元の文字列配列
-   * @return 内容のある文字列のみを含むリスト
+   * @return 内容のある文字列のみを含む、変更不可なリスト
    * @throws NullPointerException stringsがnullの場合
    */
   public static List<String> createListWithContentStream(String[] strings) {
