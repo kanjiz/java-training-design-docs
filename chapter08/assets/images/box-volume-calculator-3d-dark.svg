@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+    <!-- 背景色を黒に設定 -->
+    <rect width="100%" height="100%" fill="black"/>
+
+    <!-- タイトル -->
+    <text x="300" y="30" text-anchor="middle" font-size="24" fill="white">箱の立体図</text>
+
+    <!-- 等角投影（30度） -->
+    <g transform="translate(23.5,0) scale(1.2)">
+        <!-- 底面 -->
+        <path d="M 173.2,145 L 346.4,145 L 259.8,295 L 86.6,295 Z"
+              fill="none" stroke="white" stroke-width="1.5"/>
+
+        <!-- 左面 -->
+        <path d="M 86.6,295 L 86.6,195 L 173.2,45 L 173.2,145 Z"
+              fill="none" stroke="white" stroke-width="2"/>
+
+        <!-- 右面 -->
+        <path d="M 346.4,145 L 346.4,45 L 173.2,45 L 173.2,145 Z"
+              fill="none" stroke="white" stroke-width="2"/>
+
+        <!-- 内側の左面-->
+        <path d="M 173.2,145 L 173.2,45"
+              fill="none" stroke="white" stroke-width="1.5" stroke-dasharray="5,5"/>
+
+        <!-- 内側の右面 -->
+        <path d="M 346.4,145 L 259.8,295"
+              fill="none" stroke="white" stroke-width="1.5" stroke-dasharray="5,5"/>
+
+        <!-- 寸法線: width-2*cutSize -->
+        <line x1="86.6" y1="315" x2="259.8" y2="315" stroke="white" stroke-width="1.5"/>
+        <line x1="86.6" y1="310" x2="86.6" y2="320" stroke="white" stroke-width="1.5"/>
+        <line x1="259.8" y1="310" x2="259.8" y2="320" stroke="white" stroke-width="1.5"/>
+        <text x="173.2" y="330" text-anchor="middle" font-size="14" fill="white">(width-2*cutSize)</text>
+
+        <!-- 寸法線: height-2*cutSize (左面と平行に) -->
+        <line x1="71.6" y1="195" x2="158.2" y2="45" stroke="white" stroke-width="1.5"/>
+        <line x1="66.6" y1="195" x2="76.6" y2="195" stroke="white" stroke-width="1.5"/>
+        <line x1="153.2" y1="45" x2="163.2" y2="45" stroke="white" stroke-width="1.5"/>
+        <text x="110" y="115" text-anchor="middle" transform="rotate(-60,110,115)" font-size="14" fill="white">(height-2*cutSize)</text>
+
+        <!-- 寸法線: cutSize (垂直方向) -->
+        <line x1="366.4" y1="45" x2="366.4" y2="145" stroke="white" stroke-width="1.5"/>
+        <line x1="361.4" y1="45" x2="371.4" y2="45" stroke="white" stroke-width="1.5"/>
+        <line x1="361.4" y1="145" x2="371.4" y2="145" stroke="white" stroke-width="1.5"/>
+        <text x="380" y="95" text-anchor="start" font-size="14" fill="white">cutSize</text>
+    </g>
+</svg>
