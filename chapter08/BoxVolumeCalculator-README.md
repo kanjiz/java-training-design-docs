@@ -35,20 +35,9 @@ classDiagram
 | パッケージ/名前空間 | なし（デフォルトパッケージ） |
 | 修飾子 | public |
 
-## 3. メソッド設計
+## 3. クラス図の各操作が実現すべき処理
 
-### 3.1 mainメソッド
-
-#### 3.1.1 メソッド定義
-
-| 項目 | 内容 |
-|------|------|
-| 修飾子 | public static |
-| 戻り値の型 | void |
-| メソッド名 | main |
-| 引数 | String[] args |
-
-#### 3.1.2 機能説明
+### 3.1 main
 
 - コマンドライン引数から3つの整数値を取得
 - 引数値をint型に変換
@@ -56,35 +45,13 @@ classDiagram
 - 検証OKならcalculateVolumeメソッドで容積を計算
 - 計算結果を表示
 
-### 3.2 calculateVolumeメソッド
-
-#### 3.2.1 メソッド定義
-
-| 項目 | 内容 |
-|------|------|
-| 修飾子 | public |
-| 戻り値の型 | int |
-| メソッド名 | calculateVolume |
-| 引数 | int width, int height, int cutSize |
-
-#### 3.2.2 機能説明
+### 3.2 calculateVolume
 
 - 引数で渡された寸法から箱の容積を計算
-- 計算式：(width-2\*cutSize) \* (height-2\*cutSize) \* cutSize
+- 計算式：(width-2\*cutSize) \* (height-2*cutSize) \* cutSize
 - 計算結果をint型で返却
 
-### 3.3 canCreateBoxメソッド
-
-#### 3.3.1 メソッド定義
-
-| 項目 | 内容 |
-|------|------|
-| 修飾子 | public |
-| 戻り値の型 | boolean |
-| メソッド名 | canCreateBox |
-| 引数 | int width, int height, int cutSize |
-
-#### 3.3.2 機能説明
+### 3.3 canCreateBox
 
 - 入力された寸法で箱が作成可能かを検証
 - 寸法の組み合わせが適切な場合はtrueを返却
