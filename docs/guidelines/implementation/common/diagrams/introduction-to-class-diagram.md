@@ -47,8 +47,8 @@
 classDiagram
     class Calculator {
         -total: int
-        +add(num: int): void
-        +getTotal(): int
+        +add(num: int) void
+        +getTotal() int
     }
 ```
 
