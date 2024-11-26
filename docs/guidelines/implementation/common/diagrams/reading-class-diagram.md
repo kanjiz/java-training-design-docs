@@ -10,8 +10,8 @@
 classDiagram
     class Calculator {
         -total: int
-        +add(num: int): void
-        +getTotal(): int
+        +add(num: int) void
+        +getTotal() int
     }
 ```
 
@@ -68,8 +68,8 @@ classDiagram
 ```mermaid
 classDiagram
     class Operations {
-        +calculateTotal(price: int, quantity: int): int
-        +displayMessage(text: String): void
+        +calculateTotal(price: int, quantity: int) int
+        +displayMessage(text: String) void
     }
 ```
 
@@ -120,9 +120,9 @@ public class Attributes {
 ```mermaid
 classDiagram
     class Operations {
-        +calculateTotal(price: int, quantity: int): int
-        +displayMessage(text: String): void
-        +isValid(value: int): boolean$
+        +calculateTotal(price: int, quantity: int) int
+        +displayMessage(text: String) void
+        +isValid(value: int) boolean$
     }
 ```
 
@@ -149,9 +149,9 @@ public class Operations {
 ```mermaid
 classDiagram
     class BoxVolumeCalculator {
-        +main(args: String[]): void$
-        +calculateVolume(width: int, height: int, cutSize: int): int
-        +canCreateBox(width: int, height: int, cutSize: int): boolean
+        +main(args: String[]) void$
+        +calculateVolume(width: int, height: int, cutSize: int) int
+        +canCreateBox(width: int, height: int, cutSize: int) boolean
     }
 ```
 
