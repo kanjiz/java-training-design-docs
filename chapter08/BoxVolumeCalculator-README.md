@@ -21,9 +21,9 @@
 ```mermaid
 classDiagram
     class BoxVolumeCalculator {
-        +main(args: String[]): void$
-        +calculateVolume(width: int, height: int, cutSize: int): int
-        +canCreateBox(width: int, height: int, cutSize: int): boolean
+        +main(args: String[]) void$
+        +calculateVolume(width: int, height: int, cutSize: int) int
+        +canCreateBox(width: int, height: int, cutSize: int) boolean
     }
 ```
 
@@ -50,7 +50,6 @@ classDiagram
 
 #### 3.1.2 機能説明
 
-- BoxVolumeCalculatorのインスタンスを生成
 - コマンドライン引数から3つの整数値を取得
 - 引数値をint型に変換
 - canCreateBoxメソッドで入力値の妥当性を検証
@@ -97,46 +96,18 @@ classDiagram
 
 ```mermaid
 flowchart TD
-    A[開始] --> B[BoxVolumeCalculatorインスタンス生成]
-    B --> C[引数の数を確認]
-    C --> D{引数は3つ?}
-    D -->|No| E[使用法メッセージ表示]
-    E --> F[終了]
-    D -->|Yes| G[引数を整数に変換]
-    G --> H[canCreateBoxによる検証]
-    H --> I{箱は作成可能か?}
-    I -->|No| J[エラーメッセージ表示]
-    J --> F
-    I -->|Yes| K[calculateVolumeメソッド呼び出し]
-    K --> L[計算結果を表示]
-    L --> F
-```
-
-### 4.2 システム動作シーケンス
-
-```mermaid
-sequenceDiagram
-    participant User as ユーザー
-    participant Main as main
-    participant Calculator as BoxVolumeCalculator
-    
-    User->>Main: コマンドライン引数
-    
-    alt 引数が3つでない場合
-        Main->>User: 使用法メッセージ表示
-    else 引数が3つの場合
-        Main->>Calculator: インスタンス生成
-        Main->>Main: 引数を整数に変換
-        Main->>Calculator: canCreateBox呼び出し
-        
-        alt 箱が作成不可能
-            Main->>User: エラーメッセージ表示
-        else 箱が作成可能
-            Main->>Calculator: calculateVolume呼び出し
-            Calculator-->>Main: 容積を返却
-            Main->>User: 計算結果を表示
-        end
-    end
+    A[開始] --> B[引数の数を確認]
+    B --> C{引数は3つ?}
+    C -->|No| D[使用法メッセージ表示]
+    D --> E[終了]
+    C -->|Yes| F[引数を整数に変換]
+    F --> G[canCreateBoxによる検証]
+    G --> H{箱は作成可能か?}
+    H -->|No| I[エラーメッセージ表示]
+    I --> E
+    H -->|Yes| J[calculateVolumeメソッド呼び出し]
+    J --> K[計算結果を表示]
+    K --> E
 ```
 
 ## 5. 入出力設計
