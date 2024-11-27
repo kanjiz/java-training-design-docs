@@ -41,8 +41,8 @@ classDiagram
 
 - コマンドライン引数から3つの整数値を取得
 - 引数値をint型に変換
-- canCreateBoxメソッドで入力値の妥当性を検証
-- 検証OKならcalculateVolumeメソッドで容積を計算
+- canCreateBoxで入力値の妥当性を検証
+- 検証OKならcalculateVolumeで容積を計算
 - 計算結果を表示
 
 ### 3.2 calculateVolume
@@ -72,7 +72,7 @@ flowchart TD
     G --> H{箱は作成可能か?}
     H -->|No| I[エラーメッセージ表示]
     I --> E
-    H -->|Yes| J[calculateVolumeメソッド呼び出し]
+    H -->|Yes| J[calculateVolume呼び出し]
     J --> K[計算結果を表示]
     K --> E
 ```
