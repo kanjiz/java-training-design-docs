@@ -19,7 +19,7 @@
 ```mermaid
 classDiagram
     class LogicalOperators {
-        +main(args: String[]): void$
+        +main(args: String[]) void$
     }
 ```
 
@@ -31,28 +31,15 @@ classDiagram
 | パッケージ/名前空間 | なし（デフォルトパッケージ） |
 | 修飾子 | public |
 
-## 3. メソッド設計
+## 3. クラス図の各操作が実現すべき処理
 
-### 3.1 mainメソッド
+### 3.1 main
 
-#### 3.1.1 メソッド定義
-
-| 項目 | 内容 |
-|------|------|
-| 修飾子 | public static |
-| 戻り値の型 | void |
-| メソッド名 | main |
-| 引数 | String[] args |
-
-#### 3.1.2 機能説明
-
-- 論理型変数p, qを宣言
 - 表のヘッダーを表示
 - 4つの真偽値の組み合わせそれぞれについて：
   1. p, qに値を設定
   2. 各種論理演算を実行
   3. 結果を1行にまとめて表示
-- タブ文字で列を整列
 
 ## 4. 処理フロー
 
@@ -60,14 +47,13 @@ classDiagram
 
 ```mermaid
 flowchart TD
-    A[開始] --> B[変数p,qを宣言]
-    B --> C[表のヘッダーを表示]
-    C --> D[区切り線を表示]
-    D --> E[p=false,q=falseの計算と表示]
-    E --> F[p=false,q=trueの計算と表示]
-    F --> G[p=true,q=falseの計算と表示]
-    G --> H[p=true,q=trueの計算と表示]
-    H --> I[終了]
+    A[開始] --> B[表のヘッダーを表示]
+    B --> C[区切り線を表示]
+    C --> D[p=false,q=falseの計算と表示]
+    D --> E[p=false,q=trueの計算と表示]
+    E --> F[p=true,q=falseの計算と表示]
+    F --> G[p=true,q=trueの計算と表示]
+    G --> H[終了]
 ```
 
 ## 5. 入出力設計
@@ -90,9 +76,6 @@ flowchart TD
    - 各論理演算の結果をタブ区切りで表示
    - 真偽値はtrue/falseで表示
    - 4行のデータを表示
-   - 各行は固定幅で整列された形式で表示
-   - 文字列フォーマット機能を使用して整列表示を実現
-   - 具体的な実装方法については、各言語のガイドラインを参照してください
 
 4. 出力例：
 
