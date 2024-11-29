@@ -12,7 +12,7 @@
 
 ```mermaid
 classDiagram
-    class [クラス名] {
+    class `[クラス名]` {
         [属性と操作の定義]
     }
 ```
