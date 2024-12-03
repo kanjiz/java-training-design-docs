@@ -3,8 +3,8 @@
 ## 課題一覧
 
 1. LoopBreakContinue
-   - 無限ループ内でのbreak/continue制御
-   - 入力値に応じたループ制御の実践
+   - 無限ループ内での入力受付
+   - 特定入力によるループ制御の実践
 
 2. SalesCalculatorWithLoop
    - 売上計算処理の無限ループ実装
